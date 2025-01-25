@@ -15,7 +15,7 @@
 
 Credit to [@stevenjoezhang](https://github.com/stevenjoezhang) for the original repository
 
-<img src="demo/screenshots/screenshot-2.png" width="280"><img src="demo/screenshots/screenshot-3.png" width="280"><img src="demo/screenshots /screenshot-1.png" width="270">
+<img src="assets/screenshot-2.png" width="280"><img src="assets/screenshot-3.png" width="280"><img src="assets/screenshot-1.png" width="270">
 
 （註：以上人物模型僅供展示之用，本倉庫不包含任何模型。）
 
