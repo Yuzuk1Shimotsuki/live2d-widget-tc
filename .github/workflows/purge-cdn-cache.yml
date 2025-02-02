@@ -22,6 +22,7 @@ jobs:
             "https://purge.jsdelivr.net/gh/Yuzuk1Shimotsuki/live2d-widget@latest/live2d.min.js"
             "https://purge.jsdelivr.net/gh/Yuzuk1Shimotsuki/live2d-widget@latest/waifu-tips.json"
             "https://purge.jsdelivr.net/gh/Yuzuk1Shimotsuki/live2d-widget@latest/"
+            "https://purge.jsdelivr.net/gh/Yuzuk1Shimotsuki/live2d_api-zh-TW@latest/"
           )
           
           failed=0
