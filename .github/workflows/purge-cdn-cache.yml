@@ -1,0 +1,31 @@
+name: Purge jsDelivr Cache
+
+on:
+  push:
+    branches:
+      - main  # The current branch (hardcoded)
+  schedule:
+    - cron: '0 */6 * * *'  # Runs at 00:00 UTC every day
+  workflow_dispatch:      # Allows manual trigger
+
+jobs:
+  purge-cache:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Purge jsDelivr Cache
+        run: |
+          # Replace USERNAME with your GitHub username
+          REPOS=(
+            "https://purge.jsdelivr.net/gh/Yuzuk1Shimotsuki/live2d-widget@latest/autoload.js"
+            "https://purge.jsdelivr.net/gh/Yuzuk1Shimotsuki/live2d-widget@latest/waifu-tips.js"
+            "https://purge.jsdelivr.net/gh/Yuzuk1Shimotsuki/live2d-widget@latest/waifu.css"
+            "https://purge.jsdelivr.net/gh/Yuzuk1Shimotsuki/live2d-widget@latest/live2d.min.js"
+            "https://purge.jsdelivr.net/gh/Yuzuk1Shimotsuki/live2d-widget@latest/waifu-tips.json"
+            "https://purge.jsdelivr.net/gh/Yuzuk1Shimotsuki/live2d-widget@latest/"
+          )
+          
+          for url in "${REPOS[@]}"; do
+            echo "Purging cache for $url"
+            curl -X POST $url
+            sleep 1  # Add a small delay between requests
+          done
