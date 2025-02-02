@@ -18,8 +18,6 @@ jobs:
           REPOS=(
             "https://purge.jsdelivr.net/gh/Yuzuk1Shimotsuki/live2d-widget@latest/autoload.js"
             "https://purge.jsdelivr.net/gh/Yuzuk1Shimotsuki/live2d-widget@latest/waifu-tips.js"
-            "https://purge.jsdelivr.net/gh/Yuzuk1Shimotsuki/live2d-widget@latest/waifu.css"
-            "https://purge.jsdelivr.net/gh/Yuzuk1Shimotsuki/live2d-widget@latest/live2d.min.js"
             "https://purge.jsdelivr.net/gh/Yuzuk1Shimotsuki/live2d-widget@latest/waifu-tips.json"
             "https://purge.jsdelivr.net/gh/Yuzuk1Shimotsuki/live2d-widget@latest/"
             "https://purge.jsdelivr.net/gh/Yuzuk1Shimotsuki/live2d_api-zh-TW@latest/"
