@@ -26,6 +26,6 @@ jobs:
           
           for url in "${REPOS[@]}"; do
             echo "Purging cache for $url"
-            curl -X POST $url
+            curl -X GET $url
             sleep 1  # Add a small delay between requests
           done
