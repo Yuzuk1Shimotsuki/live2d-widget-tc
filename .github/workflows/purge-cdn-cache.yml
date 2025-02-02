@@ -24,8 +24,20 @@ jobs:
             "https://purge.jsdelivr.net/gh/Yuzuk1Shimotsuki/live2d-widget@latest/"
           )
           
+          failed=0
           for url in "${REPOS[@]}"; do
             echo "Purging cache for $url"
-            curl -X GET $url
-            sleep 1  # Add a small delay between requests
+            response=$(curl -s "$url")
+            if echo "$response" | grep -q '"success":false'; then
+              echo "Error purging $url:"
+              echo "$response"
+              failed=1
+            else
+              echo "Successfully purged $url"
+            fi
+            sleep 1
           done
+          
+          if [ $failed -eq 1 ]; then
+            exit 1
+          fi
