@@ -70,7 +70,7 @@ Credit to [@stevenjoezhang](https://github.com/stevenjoezhang) for the original 
 要在本機部署本專案的開發測試環境，你需要安裝 Node.js 和 npm，然後執行以下命令：
 
 ```bash
-git clone https://github.com/Yuzuk1Shimotsuki/live2d-widget.git
+git clone https://github.com/Yuzuk1Shimotsuki/live2d-widget-tc.git
 npm install
 npm run build
 ```
@@ -85,7 +85,7 @@ npm run build
 
 要自訂相關內容，可以把這個倉庫 Fork 一份，然後把修改過的內容通過 git push 到你的倉庫中。這時，使用方法對應地變為
 ```xml
-<script src="https://fastly.jsdelivr.net/gh/username/live2d-widget-zh-TW@latest/autoload.js"></script>
+<script src="https://fastly.jsdelivr.net/gh/username/live2d-widget-tc@latest/autoload.js"></script>
 ```
 將此處的 `username` 替換為你的 GitHub 使用者名稱。為了使 CDN 的內容正常刷新，需要建立新的 git tag 並推送至 GitHub 倉庫中，否則此處的 `@latest` 仍然指向更新前的檔案。此外 CDN 本身存在緩存，因此改動可能需要一定的時間生效。相關文件：
 - [Git Basics - Tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging)
@@ -102,16 +102,16 @@ npm run build
 這樣，整個計畫就可以透過你的網域存取了。不妨試試能否正常地透過瀏覽器開啟 `autoload.js` 和 `live2d.min.js` 等文件，並確認這些文件的內容是完整且正確的。
 一切正常的話，接下來修改 `autoload.js` 中的常數 `live2d_path` 為 `live2d-widget` 這一目錄的 URL 即可。比如說，如果你能夠通過
 ```
-https://example.com/path/to/live2d-widget/live2d.min.js
+https://example.com/path/to/live2d-widget-tc/live2d.min.js
 ```
 造訪到 `live2d.min.js`，那麼就把 `live2d_path` 的值修改為
 ```
-https://example.com/path/to/live2d-widget/
+https://example.com/path/to/live2d-widget-tc/
 ```
 路徑末端的 `/` 一定要加上。
 完成後，在你要加入看板娘的介面加入
 ```xml
-<script src="https://example.com/path/to/live2d-widget/autoload.js"></script>
+<script src="https://example.com/path/to/live2d-widget-tc/autoload.js"></script>
 ```
 就可以加載了。
 
@@ -136,7 +136,6 @@ https://example.com/path/to/live2d-widget/
   </picture>
 </a>
 
-> 感謝 jsDelivr 提供的 CDN 服務。
 > 感謝 jsDelivr 提供公共 CDN 服務。
 
 程式碼來自這篇文章魔改而來：
@@ -174,7 +173,7 @@ http://www.gnu.org/licenses/gpl-3.0.html
 本倉庫不包含任何模型，用於展示的所有Live2D模型、圖片、動作資料等版權均屬於其原作者，僅供研究學習，不得用於商業用途。
 
 Live2D 官方網站：
-https://www.live2d.com/en/
+https://www.live2d.com/
 https://live2d.github.io
 
 Live2D Cubism Core は Live2D Proprietary Software License で提供しています。  
